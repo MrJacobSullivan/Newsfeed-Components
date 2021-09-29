@@ -42,6 +42,12 @@ const exampleData = {
 
 const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParagraph }) => {
   const article = document.createElement('div')
+  const articleTitle = document.createElement('h2')
+  const articleDate = document.createElement('p')
+  const firstArticleParagraph = document.createElement('p')
+  const secondArticleParagraph = document.createElement('p')
+  const thirdArticleParagraph = document.createElement('p')
+  const expandButton = document.createElement('span')
 
   return article
 }
