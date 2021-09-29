@@ -84,6 +84,15 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`,
   },
+  {
+    title: 'Foo',
+    date: 'Jan 1st, 2021',
+    firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem laudantium hic numquam recusandae, temporibus aspernatur fuga enim voluptatibus tempora natus libero dicta fugiat sapiente aliquam magnam commodi distinctio! Sunt, eaque!`,
+
+    secondParagraph: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi harum exercitationem nesciunt odio aspernatur iste consequatur cum dolore numquam illum, enim blanditiis nulla assumenda sint. Incidunt nihil corrupti doloribus rerum?`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum molestias tempore veniam tempora, fuga, id illo, nemo nostrum sed nobis ea distinctio ducimus consequatur necessitatibus aliquid eveniet quisquam corrupti?`,
+  },
 ]
 
 export default data
