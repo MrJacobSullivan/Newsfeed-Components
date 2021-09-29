@@ -29,3 +29,22 @@ import articles from '../data/articles.js'
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+const exampleData = {
+  title: 'foo',
+  date: 'Jan 1st, 2021',
+  firstParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iure earum quidem optio, perferendis eligendi voluptatibus qui in voluptas quibusdam quos cum quis fugiat ipsum. Quisquam eveniet magni numquam doloribus?`,
+
+  secondParagraph: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur culpa officiis aliquam repellendus quibusdam a earum dolorem ea. Illo voluptatum delectus expedita sequi debitis voluptatibus nulla sit earum, tenetur ipsum?`,
+
+  thirdParagraph: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum atque omnis ipsum excepturi maiores? Qui cumque labore suscipit illum, nulla ex nihil rerum at unde voluptate nemo odit distinctio natus.`,
+}
+
+const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParagraph }) => {
+  const article = document.createElement('div')
+
+  return article
+}
+
+const testArticle = articleMaker(exampleData)
+console.log(testArticle)
