@@ -53,6 +53,13 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
   articleDate.classList.add('date')
   expandButton.classList.add('expandButton')
 
+  articleTitle.textContent = title
+  articleDate.textContent = date
+  firstArticleParagraph.textContent = firstParagraph
+  secondArticleParagraph.textContent = secondParagraph
+  thirdArticleParagraph.textContent = thirdParagraph
+  expandButton.textContent = '+'
+
   article.append(
     articleTitle,
     articleDate,
