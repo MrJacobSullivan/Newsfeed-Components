@@ -30,16 +30,6 @@ import articles from '../data/articles.js'
   Refresh the page to see the new article.
 */
 
-const exampleData = {
-  title: 'foo',
-  date: 'Jan 1st, 2021',
-  firstParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iure earum quidem optio, perferendis eligendi voluptatibus qui in voluptas quibusdam quos cum quis fugiat ipsum. Quisquam eveniet magni numquam doloribus?`,
-
-  secondParagraph: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur culpa officiis aliquam repellendus quibusdam a earum dolorem ea. Illo voluptatum delectus expedita sequi debitis voluptatibus nulla sit earum, tenetur ipsum?`,
-
-  thirdParagraph: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum atque omnis ipsum excepturi maiores? Qui cumque labore suscipit illum, nulla ex nihil rerum at unde voluptate nemo odit distinctio natus.`,
-}
-
 const articlesDiv = document.querySelector('.articles')
 
 const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParagraph }) => {
@@ -64,6 +54,7 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
 
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open')
+    expandButton.textContent = expandButton.textContent === '+' ? '-' : '+'
   })
 
   article.append(
@@ -78,5 +69,6 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
   return article
 }
 
-const testArticle = articleMaker(exampleData)
-articlesDiv.append(testArticle)
+articles
+  .map((article) => articleMaker(article))
+  .forEach((articleElement) => articlesDiv.append(articleElement))
