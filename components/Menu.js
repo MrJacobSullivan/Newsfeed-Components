@@ -31,7 +31,17 @@ const menuMaker = (items) => {
 
   const listItemMaker = (item) => {
     const listItem = document.createElement('li')
+    listItem.innerText = item
 
     return listItem
   }
+
+  const itemElements = items.map((item) => listItemMaker(item))
+  itemElements.forEach((itemElement) => list.append(itemElement))
+
+  menu.append(list)
+
+  return menu
 }
+
+const menu = menuMaker(menuItems)
