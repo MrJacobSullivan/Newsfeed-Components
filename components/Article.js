@@ -49,6 +49,19 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
   const thirdArticleParagraph = document.createElement('p')
   const expandButton = document.createElement('span')
 
+  article.classList.add('article')
+  articleDate.classList.add('date')
+  expandButton.classList.add('expandButton')
+
+  article.append(
+    articleTitle,
+    articleDate,
+    firstArticleParagraph,
+    secondArticleParagraph,
+    thirdArticleParagraph,
+    expandButton
+  )
+
   return article
 }
 
