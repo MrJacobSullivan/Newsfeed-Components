@@ -40,6 +40,8 @@ const exampleData = {
   thirdParagraph: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum atque omnis ipsum excepturi maiores? Qui cumque labore suscipit illum, nulla ex nihil rerum at unde voluptate nemo odit distinctio natus.`,
 }
 
+const articlesDiv = document.querySelector('.articles')
+
 const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParagraph }) => {
   const article = document.createElement('div')
   const articleTitle = document.createElement('h2')
@@ -60,6 +62,10 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
   thirdArticleParagraph.textContent = thirdParagraph
   expandButton.textContent = '+'
 
+  expandButton.addEventListener('click', () => {
+    article.classList.toggle('article-open')
+  })
+
   article.append(
     articleTitle,
     articleDate,
@@ -73,4 +79,4 @@ const articleMaker = ({ title, date, firstParagraph, secondParagraph, thirdParag
 }
 
 const testArticle = articleMaker(exampleData)
-console.log(testArticle)
+articlesDiv.append(testArticle)
